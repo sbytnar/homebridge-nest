@@ -8,9 +8,12 @@ This repository contains the Nest plugin for homebridge that was previously bund
 
 1. Install homebridge using: npm install -g homebridge
 2. Install this plugin using: npm install -g homebridge-nest
-2.a. Update node-gyp so dns-sd-bindings works: npm install -g node-gyp
-2.b. cd node_modules/mdns
-2.c. node-gyp BUILDTYPE=Release rebuild
+2. a. Update node-gyp so dns-sd-bindings works: npm install -g node-gyp
+2. b. cd node_modules/mdns
+2. c. sudo node-gyp BUILDTYPE=Release rebuild
+2. d. sudo npm install --unsafe-perm mdns
+2. e. cd /usr/local/lib/node_modules/homebridge
+2. f. sudo npm rebuild --unsafe-perm
 3. Update your configuration file. See sample-config.json snippet below. 
 
 It is **Strongly advised that you switch to the new API** but it is not required at the moment.  It will fall back to the old API, but **no new development will be done on the old API**. 
